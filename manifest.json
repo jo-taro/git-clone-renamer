@@ -1,0 +1,29 @@
+{
+
+  "description": "Git clone renamer",
+  "manifest_version": 2,
+  "name": "GitCloneRen",
+  "version": "1.0",
+  "homepage_url": "https://github.com/jo-taro/git-clone-renamer",
+
+  "icons": {
+    "48": "icons/icon_git_48.png",
+    "128": "icons/icon_git_128.png"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs"
+   ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.github.com/*"],
+      "js": ["git-clone-renamer.js"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html"
+  }
+}
